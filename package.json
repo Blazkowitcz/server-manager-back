@@ -1,0 +1,26 @@
+{
+  "name": "server-manager-back",
+  "version": "1.0.0",
+  "description": "Daemon to watch and manage your server",
+  "main": "server.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blazkowitcz/server-manager-back.git"
+  },
+  "author": "Blazkowicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blazkowitcz/server-manager-back/issues"
+  },
+  "homepage": "https://github.com/Blazkowitcz/server-manager-back#readme",
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}
