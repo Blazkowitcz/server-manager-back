@@ -5,5 +5,6 @@ Daemon to watch and manage your server
 
 Front-End : https://github.com/Blazkowitcz/server-manager-front
 
-|Dependency Name|Version|
-|bcryptjs|2.4.3|
+| Dependency Name | Version |
+| --------------- | ------- |
+| bcryptjs | 2.4.3 |
