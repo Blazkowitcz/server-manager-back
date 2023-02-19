@@ -16,4 +16,4 @@ Front-End : https://github.com/Blazkowitcz/server-manager-front
 | mysql2 | 3.1.2 |
 | path | 0.12.7 |
 | sequelize | 6.28.0 |
-| kkito-transmission-rpc | 0.2.0 |
+| transmission | 0.4.10 |
