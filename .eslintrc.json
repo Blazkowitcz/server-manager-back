@@ -4,9 +4,6 @@
         "commonjs": true,
         "es2021": true
     },
-    "extends": [
-        "standard"
-    ],
     "parserOptions": {
         "ecmaVersion": "latest"
     },
@@ -14,8 +11,9 @@
         "semi": ["error", "always"],
         "quotes": ["error", "single"],
         "eqeqeq": ["error", "always"],
-        "object-curly-spacing": "off",
-        "space-before-function-paren": "off",
-        "eol-last": "off"
+        "prefer-const": ["error", {
+            "destructuring": "any",
+            "ignoreReadBeforeAssign": false
+        }]
     }
 }
