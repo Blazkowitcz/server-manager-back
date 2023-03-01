@@ -70,3 +70,23 @@ exports.removeTorrent = async (req, res) => {
     await transmission.removeTorrent(req.body.torrent_id, remove_data);
     res.send(true);
 };
+
+/**
+ * Stop a torrent
+ * @param {Request} req 
+ * @param {Response} res 
+ */
+exports.stopTorrent = async (req, res) => {
+    await transmission.stop(req.body.torrent_id);
+    res.send(true);
+}
+
+/**
+ * Start a torrent
+ * @param {Request} req 
+ * @param {Response} res 
+ */
+exports.startTorrent = async (req, res) => {
+    await transmission.start(req.body.torrent_id);
+    res.send(true);
+}
