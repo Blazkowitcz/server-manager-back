@@ -79,7 +79,7 @@ exports.removeTorrent = async (req, res) => {
 exports.stopTorrent = async (req, res) => {
     await transmission.stop(req.body.torrent_id);
     res.send(true);
-}
+};
 
 /**
  * Start a torrent
@@ -89,4 +89,4 @@ exports.stopTorrent = async (req, res) => {
 exports.startTorrent = async (req, res) => {
     await transmission.start(req.body.torrent_id);
     res.send(true);
-}
+};
