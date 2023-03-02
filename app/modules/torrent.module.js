@@ -1,3 +1,4 @@
-const {Transmission} = require('kkito-transmission-rpc');
-const transmission = new Transmission({ host: '192.168.1.26', auth: {username: 'blazkowicz', password: 'marley66'} });
+const Transmission = require('transmission');
+const config = require('../../config.json');
+const transmission = new Transmission({host: config.torrent.transmission.host, port: 9091, username: config.torrent.transmission.auth.username, password: config.torrent.transmission.auth.password});
 module.exports = transmission;

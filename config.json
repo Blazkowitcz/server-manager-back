@@ -8,5 +8,15 @@
         "database_name": "server_manager",
         "database_type": "mysql"
     },
-    "salt": "thisPasswordMustBeChanged"
+    "salt": "thisPasswordMustBeChanged",
+    "torrent": {
+        "transmission": {
+            "host": "",
+            "auth": {
+                "username": "",
+                "password": ""
+            }
+        },
+        "autodownload_folder": "/home/blazkowicz/torrents"
+    }
 }

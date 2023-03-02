@@ -1,7 +1,15 @@
 module.exports = app => {
     const TorrentController = require('../controllers/torrent.controller');
 
+    /**
+     * Get
+     */
     app.get('/torrents', TorrentController.getTorrents);
     app.get('/getTorrentInfo', TorrentController.getTorrentInfo);
-    //app.get('/signin', AuthController.signin);
+
+    /**
+     * Post
+     */
+    app.post('/addTorrent', TorrentController.addTorrent);
+    app.post('/removeTorrent', TorrentController.removeTorrent);
 };
