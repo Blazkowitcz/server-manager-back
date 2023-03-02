@@ -6,7 +6,7 @@ const app = express();
 const config = require('./config.json');
 const path = require('path');
 const rateLimit = require('express-rate-limit');
-const limiter = rateLimit({windowMs: 1*60*1000, max: 5})
+const limiter = rateLimit({windowMs: 1*60*1000, max: 5});
 require('./app/modules/database.module');
 
 app.use(fileUpload());
