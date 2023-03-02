@@ -12,6 +12,7 @@ Front-End : https://github.com/Blazkowitcz/server-manager-front
 | cors | 2.8.5 |
 | express | 4.18.2 |
 | express-fileupload | 1.4.0 |
+| express-rate-limit | 6.7.0 |
 | jsonwebtoken | 9.0.0 |
 | mysql2 | 3.1.2 |
 | path | 0.12.7 |
