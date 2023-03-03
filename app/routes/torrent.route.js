@@ -4,12 +4,12 @@ module.exports = app => {
     /**
      * Get
      */
-    app.get('/torrents', TorrentController.getTorrents);
-    app.get('/getTorrentInfo', TorrentController.getTorrentInfo);
+    app.get('/torrent/all', TorrentController.getTorrents);
+    app.get('/torrent/getInfo', TorrentController.getTorrentInfo);
 
     /**
      * Post
      */
-    app.post('/addTorrent', TorrentController.addTorrent);
-    app.post('/removeTorrent', TorrentController.removeTorrent);
+    app.post('/torrent/add', TorrentController.addTorrent);
+    app.post('/torrent/remove', TorrentController.removeTorrent);
 };
