@@ -12,4 +12,5 @@ module.exports = app => {
     app.post('/service/add', ServiceController.addService);
     app.post('/service/remove', ServiceController.removeService);
     app.post('/service/edit', ServiceController.editService);
+    app.post('/service/start', ServiceController.startService);
 };
