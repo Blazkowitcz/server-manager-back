@@ -21,5 +21,6 @@ app.use(limiter);
  */
 require('./app/routes/auth.route')(app);
 require('./app/routes/torrent.route')(app);
+require('./app/routes/service.route')(app);
 
 app.listen(config.port || 3000, function() {});

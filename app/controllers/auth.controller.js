@@ -60,7 +60,6 @@ exports.signup = async (req, res) => {
             res.send({status: true});
         }
     } catch (e){
-        console.log(e);
         res.send({status: false, message: 'An error occured'});
     }
 };
