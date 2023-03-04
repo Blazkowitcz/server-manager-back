@@ -14,7 +14,6 @@ exports.getAllServices = async (req, res) => {
     }
     const promise = new Promise((resolve, reject) => {
         services.forEach(async (service, index, array) => {
-            console.log(service);
             const reachable = await socket.isPortReachable(service.port, service.ip);
             service.dataValues.reachable = reachable;
             if (index === array.length -1){
@@ -33,7 +32,6 @@ exports.getAllServices = async (req, res) => {
  * @param {Response} res 
  */
 exports.addService = async (req, res) => {
-    console.log(req.body);
     const service = await Service.create({
         name: req.body.name,
         start_service: req.body.start_service,
