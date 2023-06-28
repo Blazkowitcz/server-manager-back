@@ -1,6 +1,7 @@
 const Service = require('../models/service.model');
 const socket = require('../utils/socket.util');
 const {spawn} = require('child_process');
+const Server = require('../models/server.model');
 
 /**
  * Get all services
@@ -8,7 +9,7 @@ const {spawn} = require('child_process');
  * @param {Response} res 
  */
 exports.getAllServices = async (req, res) => {
-    const services = await Service.findAll();
+    const services = await Service.findAll({include: Server});
     if(services.length === 0){
         res.send(services);
     }
@@ -32,13 +33,16 @@ exports.getAllServices = async (req, res) => {
  * @param {Response} res 
  */
 exports.addService = async (req, res) => {
+    const server = await Server.findOne({where: {id: req.body.server}});
+    console.log(server);
     const service = await Service.create({
         name: req.body.name,
         start_service: req.body.start_service,
         stop_service: req.body.stop_service,
         restart_service: req.body.restart_service, 
         ip: req.body.ip,
-        port: req.body.port
+        port: req.body.port,
+        serverId: server.id
     });
     service.save();
     res.send(true);

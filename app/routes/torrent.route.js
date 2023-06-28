@@ -5,7 +5,7 @@ module.exports = app => {
      * Get
      */
     app.get('/torrent/all', TorrentController.getTorrents);
-    app.get('/torrent/getInfo', TorrentController.getTorrentInfo);
+    app.get('/torrent/info', TorrentController.getTorrentInfo);
 
     /**
      * Post

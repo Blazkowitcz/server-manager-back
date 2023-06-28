@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const database = require('../modules/database.module');
+const Server = require('./server.model');
 
 const Service = database.define('services', {
     ip: {
@@ -25,9 +26,16 @@ const Service = database.define('services', {
     port: {
         type: DataTypes.STRING,
         allowNull: false
-    }
+    },
 });
-
+Server.hasMany(Service);
+Service.belongsTo(Server,{
+  foreignKey: {
+    allowNull: false,
+    field: 'id',
+  },
+  onDelete: 'CASCADE',
+});
 database.sync();
 
 module.exports = Service;

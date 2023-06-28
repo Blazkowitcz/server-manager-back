@@ -13,6 +13,8 @@ exports.getTorrents = async (req, res) => {
         transmission.get(function(err, arg){
             arg.torrents.forEach(t => {
                 const torrent = {};
+                torrent.id = t.id;
+                torrent.hash = t.hashString;
                 torrent.name = t.name;
                 torrent.percentage = t.percentDone * 100;
                 torrents.push(torrent);
@@ -34,7 +36,7 @@ exports.getTorrentInfo = async (req, res) => {
         transmission.get(function(err, arg){
             let torrent = {};
             arg.torrents.forEach(t => {
-                if (t.id.toString() === req.body.torrent_id){
+                if (t.hashString === req.query.hash){
                     t.percentDone = t.percentDone * 100;
                     torrent = t;
                 }
